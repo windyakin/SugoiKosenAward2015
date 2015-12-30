@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+$body-bg:               #fff !default;
+
 // Glyphicon Path
 $icon-font-path:          "../../lib/bootstrap/fonts/" !default;
 
@@ -8,3 +10,5 @@ $font-family-humanist-sans-serif: 'Helvetica Neue', Helvetica, 'Arial', '游ゴ�
 $font-family-sans-serif:  'Helvetica Neue', Helvetica, 'Arial', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif !default;
 $font-family-serif:       'Times New Roman', Times, '游明朝体', YuMincho, 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho', 'MS 明朝', serif !default;
 $font-family-base:        $font-family-sans-serif !default;
+
+$headings-font-weight:    700 !default;

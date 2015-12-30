@@ -161,42 +161,49 @@
   </div>
 </section>
 
-<section class="container section introduction">
-  <div class="row">
-    <div class="col-xs-12 heading">
-      <h2>全国55高専すべてのウェブサイトを拝見し､点数化しました｡</h2>
+<section class="section section-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 heading">
+        <h2>全国55高専すべてのウェブサイトを拝見し､点数化しました｡</h2>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-5">
-      <img src="/assets/img/map.png" alt="全国の高専" class="img-responsive">
-    </div>
-    <div class="col-md-7">
-      <p>全国55高専全てのウェブサイトを緊急調査 2015年11月〜12月時点でのウェブサイトに点数をつけていきます。評価項目は以下のとおり。</p>
-      <dl>
-        <dt>デザイン性</dt>
-        <dd>ウェブサイトのデザインについて、美しさ・見やすさなどを採点</dd>
-      </dl>
-      <dl>
-        <dt>更新頻度</dt>
-        <dd>学校の活動などを発信するニュースなどの更新が頻繁に行われているか</dd>
-      </dl>
-      <dl>
-        <dt>情報整理</dt>
-        <dd>サイト上にある情報の整理が行き届いており、必要な情報にアクセスできるか</dd>
-      </dl>
-      <dl>
-        <dt>アクセシビリティ</dt>
-        <dd>文字サイズの切り替えやスマートフォンなどの対応ができているかどうか</dd>
-      </dl>
-      <dl>
-        <dt>中学生向け</dt>
-        <dd>高専のサイトの一番のターゲットとも言える中学生でも見やすい構成になっているか</dd>
-      </dl>
+    <div class="row">
+      <div class="col-md-5">
+        <img src="/assets/img/map.png" alt="全国の高専" class="img-responsive">
+      </div>
+      <div class="col-md-7">
+
+        <h3>評価したポイント</h3>
+
+        <p>全国55高専のウェブサイトについて2015年11月〜12月時点に閲覧できた状態のものを、以下の評価項目でそれぞれ点数化。各項目は5点満点、0.5点刻み。</p>
+
+        <div class="checkpoints">
+          <dl>
+            <dt><i class="fa fa-fw fa-paint-brush"></i> デザイン性</dt>
+            <dd>レイアウト・配色や文字・写真などが見やすいかどうか</dd>
+          </dl>
+          <dl>
+            <dt><i class="fa fa-fw fa-refresh"></i> 更新頻度</dt>
+            <dd>学校の活動などを発信するニュースなどの更新が頻繁に行われているか</dd>
+          </dl>
+          <dl>
+            <dt><i class="fa fa-fw fa-magic"></i> 情報整理</dt>
+            <dd>サイト上にある情報の整理が行き届いており、必要な情報にアクセスできるか</dd>
+          </dl>
+          <dl>
+            <dt><i class="fa fa-fw fa-wheelchair"></i>アクセシビリティ</dt>
+            <dd>文字サイズの切り替えやスマートフォンなどの対応ができているかどうか</dd>
+          </dl>
+          <dl>
+            <dt><i class="fa fa-fw fa-graduation-cap"></i> 中学生向け</dt>
+            <dd>高専のサイトの一番のターゲットとも言える中学生でも見やすい構成になっているか</dd>
+          </dl>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-
 
 <section class="container section">
 	<div class="row">
@@ -227,22 +234,14 @@
 						<div class="small text-muted">※この高専がすごいサイトを離れます</div>
 					</div>
 				</article>
-				<div class="col-md-4 evaluation-point">
+				<div class="col-md-4 evaluation-point" data-kosen="ube">
 					<div class="panel panel-default">
 						<div class="panel-body">
 							<div class="embed-responsive embed-responsive-4by3">
-								<canvas id="myChart" class="embed-responsive-item"></canvas>
+								<canvas class="embed-responsive-item radarchart"></canvas>
 							</div>
 						</div>
 						<table class="table evaluation-point-table">
-							<tbody>
-								<tr><th>デザイン性</th>        <td>5</td></tr>
-								<tr><th>更新頻度</th>          <td>5</td></tr>
-								<tr><th>情報整理</th>          <td>5</td></tr>
-								<tr><th>アクセシビリティ</th>  <td>5</td></tr>
-								<tr><th>中学生向け</th>        <td>5</td></tr>
-								<tr class="priamry"><th>合計</th>  <td>25</td></tr>
-							</tbody>
 						</table>
 					</div>
 				</div>
@@ -251,45 +250,25 @@
 	</div>
 </section>
 
-
-
+<script id="announceTemplate" type="text/x-jsrender">
+  <tbody>
+    <tr><th>デザイン性</th>        <td class="point-design">{{:~getStar(data[0])}}</td></tr>
+    <tr><th>更新頻度</th>          <td class="point-relaod">{{:~getStar(data[1])}}</td></tr>
+    <tr><th>情報整理</th>          <td class="point-info">{{:~getStar(data[2])}}</td></tr>
+    <tr><th>アクセシビリティ</th>  <td class="point-access">{{:~getStar(data[3])}}</td></tr>
+    <tr><th>中学生向け</th>        <td class="point-4jhs">{{:~getStar(data[4])}}</td></tr>
+    <tr><th>合計</th>              <td class="point-total">{{:~sumArray(data)}}</td></tr>
+  </tbody>
+</script>
 <script src="lib/jquery/jquery.min.js"></script>
+<script src="https://cdn.rawgit.com/BorisMoore/jsviews/master/jsrender.min.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
 <script src="assets/js/default.js"></script>
 <script src="https://platform.twitter.com/widgets.js" id="twitter-wjs" async="async"></script>
 <div id="fb-root"></div>
 <script src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=238369762859730&version=v2.3" id="facebook-jssdk" async="async"></script>
 <script src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
-
-<script>
-var ctx = $("#myChart").get(0).getContext("2d");
-var data = {
-	labels: ["デザイン性", "更新頻度", "情報整理", "アクセシビリティ", "中学生向け"],
-	datasets: [
-		{
-			label: "My Second dataset",
-			fillColor: "rgba(151,187,205,0.2)",
-			strokeColor: "rgba(151,187,205,1)",
-			pointColor: "rgba(151,187,205,1)",
-			pointStrokeColor: "#fff",
-			pointHighlightFill: "#fff",
-			pointHighlightStroke: "rgba(151,187,205,1)",
-			data: [5, 5, 5, 5, 5]
-		}
-	]
-};
-Chart.defaults.global.responsive = true;
-Chart.defaults.global.animationEasing = 'easeOutBounce';
-var myRadarChart = new Chart(ctx).Radar(data, {
-	scaleOverride: true,
-	scaleSteps: 5,
-	scaleStepWidth : 1,
-	scaleStartValue : 0
-});
-
-</script>
 
 </body>
 </html>

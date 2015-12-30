@@ -3,8 +3,6 @@
 @import "honoka/variables";
 @import "eli/variables";
 
-$basic-blue: #b3e5fc;
-
 header {
 	padding: $padding-base-vertical 0;
 	background: #fff;
@@ -91,14 +89,14 @@ header {
 }
 
 .section {
-	padding-top: $line-height-computed * 2;
-	padding-bottom: $line-height-computed * 2;
+	padding-top: $line-height-computed * 4;
+	padding-bottom: $line-height-computed * 4;
+	&.section-bg {
+		background: #f9f9f9;
+	}
 	.heading {
 		margin-bottom: $line-height-computed;
 		text-align: center;
-		h2 {
-			font-weight: bold;
-		}
 	}
 }
 
@@ -120,6 +118,15 @@ header {
 	}
 	.icon {
 		width: 50px;
+	}
+}
+
+.checkpoints {
+	dl {
+		margin-bottom: $line-height-computed / 2;
+		dt {
+			font-size: $font-size-h4;
+		}
 	}
 }
 
@@ -159,7 +166,6 @@ header {
 		padding: ($line-height-computed * 2) ($padding-large-horizontal * 2) ($line-height-computed * 2) ($padding-large-horizontal * 2 + 150px);
 		margin: 0;
 		font-size: $font-size-h1;
-		font-weight: bold;
 		color: #fff;
 		text-shadow: 0 2px $gray-dark;
 		letter-spacing: 0.2em;
@@ -213,12 +219,11 @@ header {
 	.evaluation-title {
 		padding: 0 0 $padding-base-vertical;
 		margin-top: 0;
-		font-weight: bold;
 		border-bottom: 1px dashed $gray;
 	}
 	.evaluation-point-table {
-		td::after {
-			content: "pt";
+		.fa {
+			color: $brand-warning;
 		}
 	}
 }
