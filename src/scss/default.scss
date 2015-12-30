@@ -1,0 +1,226 @@
+@charset "UTF-8";
+
+@import "honoka/variables";
+@import "eli/variables";
+
+$basic-blue: #b3e5fc;
+
+header {
+	padding: $padding-base-vertical 0;
+	background: #fff;
+	h1 {
+		width: 500px;
+		max-width: 100%;
+		margin: 0 auto;
+		img {
+			display: block;
+			max-width: 100%;
+			margin: 0 auto;
+		}
+		&::after {
+			display: block;
+			padding: $padding-base-vertical 0;
+			font-size: $font-size-large;
+			text-align: center;
+			content: attr(data-section);
+			border-top: 2px solid #000;
+		}
+	}
+}
+
+.special {
+	position: relative;
+	max-height: 640px;
+	overflow: hidden;
+	background-image: url("/assets/img/bg.png");
+	background-size: 2253px 640px;
+	&::before {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+		content: "";
+		background-image: url("/assets/img/keepout.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+	.special-text {
+		position: relative;
+		display: block;
+		max-width: 100%;
+		max-height: 640px;
+		margin: 0 auto;
+	}
+}
+
+.social {
+	padding: $padding-large-vertical 0;
+	background: $gray-lighter;
+}
+
+.social-button {
+	position: relative;
+	padding: $padding-large-vertical 0;
+	margin: 0 auto !important;
+	overflow: hidden;
+	> ul {
+		position: relative;
+		left: 50%;
+		float: left;
+		padding: 0;
+		margin: 0;
+		list-style: outside none none;
+		> li {
+			position: relative;
+			left: -50%;
+			float: left;
+			padding: 0;
+			margin: 0 10px;
+			.fb-like {
+				> span {
+					vertical-align: 0 !important;
+				}
+			}
+		}
+	}
+}
+
+.section {
+	padding-top: $line-height-computed * 2;
+	padding-bottom: $line-height-computed * 2;
+	.heading {
+		margin-bottom: $line-height-computed;
+		text-align: center;
+		h2 {
+			font-weight: bold;
+		}
+	}
+}
+
+.introduction {
+	.profile {
+		margin-bottom: $line-height-computed;
+		h3 {
+			margin-top: $line-height-computed / 2;
+		}
+		.avatar {
+			width: 100%;
+			max-width: 150px;
+		}
+		.accounts {
+			.fa.fa-twitter {
+				color: #55acee;
+			}
+		}
+	}
+	.icon {
+		width: 50px;
+	}
+}
+
+.screenshot {
+	position: relative;
+	overflow: hidden;
+	.screenshot-link {
+		display: block;
+		&::after {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			width: 200px;
+			height: $line-height-computed * 3;
+			padding: $line-height-computed $padding-base-horizontal;
+			margin: auto;
+			line-height: $line-height-computed;
+			color: #fff;
+			text-align: center;
+			content: "ウェブサイトを見る";
+			background: rgba(#000, 0.8);
+			border-radius: $border-radius-base;
+		}
+	}
+	.screenshot-img {
+		display: block;
+		max-width: 100%;
+	}
+	.screenshot-title {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: ($line-height-computed * 2) ($padding-large-horizontal * 2) ($line-height-computed * 2) ($padding-large-horizontal * 2 + 150px);
+		margin: 0;
+		font-size: $font-size-h1;
+		font-weight: bold;
+		color: #fff;
+		text-shadow: 0 2px $gray-dark;
+		letter-spacing: 0.2em;
+		background: rgba(#000, 0.6);
+		transition-timing-function: ease;
+		transition-duration: 0.3s;
+		transition-property: opacity;
+		&::after {
+			display: block;
+			padding-top: $line-height-computed / 3;
+			margin-top: $line-height-computed / 3;
+			font-size: $font-size-base;
+			font-weight: normal;
+			letter-spacing: normal;
+			content: attr(data-en);
+			border-top: 1px dotted #fff;
+		}
+	}
+}
+
+.rank {
+	&::before {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: $padding-large-horizontal;
+		display: block;
+		width: 150px;
+		height: 150px;
+		margin: auto;
+		content: "";
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	&.rank-1st::before {
+		background-image: url("/assets/img/award/1st.png");
+	}
+	&.rank-2nd::before {
+		background-image: url("/assets/img/award/2nd.png");
+	}
+	&.rank-3rd::before {
+		background-image: url("/assets/img/award/3rd.png");
+	}
+}
+
+.evaluation {
+	margin-top: $line-height-computed;
+	.evaluation-text {
+		text-align: justify;
+	}
+	.evaluation-title {
+		padding: 0 0 $padding-base-vertical;
+		margin-top: 0;
+		font-weight: bold;
+		border-bottom: 1px dashed $gray;
+	}
+	.evaluation-point-table {
+		td::after {
+			content: "pt";
+		}
+	}
+}
+
+@import "animation";

@@ -1,0 +1,35 @@
+.special {
+	// animation: bg-animation 40s linear infinite;
+}
+
+@keyframes bg-animation {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 2253px 0;
+	}
+}
+
+.screenshot {
+	.screenshot-link {
+		transition-timing-function: ease;
+		transition-duration: 0.3s;
+		transition-property: opacity;
+		&::after {
+			opacity: 0;
+			transition-timing-function: ease;
+			transition-duration: 0.3s;
+			transition-property: opacity;
+		}
+		&:hover {
+			opacity: 0.7;
+			.screenshot-title {
+				// opacity: 0.8;
+			}
+			&::after {
+				opacity: 1;
+			}
+		}
+	}
+}
