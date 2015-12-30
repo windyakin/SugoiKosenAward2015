@@ -6,23 +6,24 @@
 header {
 	padding: $padding-base-vertical 0;
 	background: #fff;
-	h1 {
-		width: 500px;
+}
+
+.title {
+	width: 500px;
+	max-width: 100%;
+	margin: 0 auto;
+	img {
+		display: block;
 		max-width: 100%;
 		margin: 0 auto;
-		img {
-			display: block;
-			max-width: 100%;
-			margin: 0 auto;
-		}
-		&::after {
-			display: block;
-			padding: $padding-base-vertical 0;
-			font-size: $font-size-large;
-			text-align: center;
-			content: attr(data-section);
-			border-top: 2px solid #000;
-		}
+	}
+	&::after {
+		display: block;
+		padding: $padding-base-vertical 0;
+		font-size: $font-size-large;
+		text-align: center;
+		content: attr(data-section);
+		border-top: 2px solid #000;
 	}
 }
 
@@ -125,7 +126,28 @@ header {
 	dl {
 		margin-bottom: $line-height-computed / 2;
 		dt {
+			margin-bottom: $line-height-computed / 3;
 			font-size: $font-size-h4;
+		}
+	}
+}
+
+.award {
+	margin-top: $line-height-computed;
+	margin-bottom: $line-height-computed;
+	.award-img {
+		text-align: center;
+		img {
+			max-width: 200px;
+			margin: 0 auto;
+		}
+	}
+	.award-title {
+		font-size: $font-size-h2;
+		text-align: center;
+		a {
+			display: inline-block;
+			margin-top: $line-height-computed;
 		}
 	}
 }
@@ -212,18 +234,34 @@ header {
 }
 
 .evaluation {
-	margin-top: $line-height-computed;
+	margin-top: $line-height-computed * 2;
 	.evaluation-text {
 		text-align: justify;
 	}
+	.visit {
+		margin-top: $line-height-computed;
+	}
 	.evaluation-title {
-		padding: 0 0 $padding-base-vertical;
+		padding: 0 0 $padding-large-vertical;
 		margin-top: 0;
+		margin-bottom: $line-height-computed;
 		border-bottom: 1px dashed $gray;
 	}
 	.evaluation-point-table {
-		.fa {
+		th, td {
+			vertical-align: middle;
+		}
+		td {
+			text-align: right;
+		}
+		.fa[class*="fa-star"] {
 			color: $brand-warning;
+		}
+		.point-total {
+			font-size: $font-size-large;
+			&::after {
+				content: "pt";
+			}
 		}
 	}
 }

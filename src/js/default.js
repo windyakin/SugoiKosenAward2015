@@ -7,15 +7,22 @@
 		throw new Error('This JavaScript requires jQuery');
 	}
 
+	function formatNum(point) {
+		var str = point.toString();
+		if (point % 1 !== 0.5) {
+			str = point.toString() + '.0';
+		}
+		return str;
+	}
 
 	$(document).ready(function() {
 		Chart.defaults.global.responsive = true;
 		var kosenData = {
 			ube: [5, 4.5, 5, 5, 5],
-			nagaoka: [4.5, 4.5, 5, 5, 5],
-			kanazawa: [5, 5, 5, 5, 5],
+			nagaoka: [4.5, 4.5, 5, 3, 5],
+			kanazawa: [4.5, 4, 4.5, 4, 3.5],
 			kisarazu: [4, 3.5, 5, 4.5, 3.5],
-			kochi: [5, 5, 5, 5, 5]
+			kochi: [4.5, 3.5, 4.5, 3, 5]
 		};
 		var base = {
 			labels: ['デザイン性', '更新頻度', '情報整理', 'アクセシビリティ', '中学生向け'],
@@ -57,10 +64,12 @@
 					}
 					if (point % 1 === 0.5) {
 						str += star[1];
+						count++;
 					}
-					for (var i = count; i < count; i++) {
+					for (var i = count; i < 5; i++) {
 						str += star[2];
 					}
+					str += ' (' + formatNum(point) + ')';
 					return str;
 				},
 				sumArray: function(array) {
@@ -68,7 +77,7 @@
 					for (var i = 0; i < array.length; i++) {
 						sum += array[i];
 					}
-					return sum;
+					return formatNum(sum);
 				}
 			});
 			$(this).find('.evaluation-point-table').html(html);

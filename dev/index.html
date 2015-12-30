@@ -35,7 +35,7 @@
 <body>
 
 <header>
-  <h1 data-section="ウェブサイト編"><img src="/assets/img/logo.png" alt="この高専がすごい！" /></h1>
+  <h1 class="title" data-section="ウェブサイト編"><img src="/assets/img/logo.png" alt="この高専がすごい！"></h1>
 </header>
 
 <div class="special">
@@ -68,7 +68,7 @@
         </div>
         <div class="col-sm-9 text-justify">
           <h3>じゅりあん</h3>
-          <p>津山高専 専攻科2年生。<a href="http://honokak.osaka/">日本語が美しく表示できるBootstrapテーマ Honoka</a> の作者で、最近は<a href="http://ost.procon-online.net/">PROCON O.S.T. Project</a>のデザイン等を担当。</p>
+          <p>津山高専 専攻科2年生。<a href="http://honokak.osaka/">日本語が美しく表示できるBootstrapテーマ Honoka</a> の作者で、最近は <a href="http://ost.procon-online.net/">PROCON O.S.T. Project</a> でジャケットデザインなどを担当。</p>
           <div class="accounts">
             <i class="fa fa-lg fa-twitter"></i> <a href="https://twitter.com/MITLicense">@MITLicense</a>
           </div>
@@ -82,7 +82,7 @@
         </div>
         <div class="col-sm-9 text-justify">
           <h3>らりょす</h3>
-          <p>津山高専 本科3年。Webフロントエンドエンジニアになりたいと思いつつ、Webシステムの開発などをしています。<a href="https://proconist.net/">Proconist.net</a> のデザインを担当。</p>
+          <p>津山高専 本科3年。ウェブフロントエンドエンジニアになりたいと思いつつ、ウェブシステムの開発などをしています。<a href="https://proconist.net/">Proconist.net</a> のデザインを担当。</p>
           <div class="accounts">
             <i class="fa fa-lg fa-twitter"></i> <a href="https://twitter.com/raryosu">@raryosu</a>
           </div>
@@ -146,7 +146,7 @@
           <img src="/assets/img/avatar/windyakin.jpg" alt="じゅりあん" class="img-circle icon">
         </div>
         <div class="media-body">
-          <p>あー それいいかも。あー俺とらりょすで手分けしてランク付けすればいいよね、らりょす東側、私は西側するわ。よろしく。</p>
+          <p>あー それいいかも。じゃあ俺とらりょすで手分けして点数付けすればいいよね、らりょすは東日本側、私は西日本側するわ。というわけでよろしく。</p>
         </div>
       </div>
       <div class="media">
@@ -205,59 +205,306 @@
   </div>
 </section>
 
-<section class="container section">
-	<div class="row">
-		<div class="col-xs-12 screenshot">
-			<div class="screenshot">
-				<a href="#" class="screenshot-link">
-					<img src="/assets/img/screenshot/ube.png" alt="宇部高専" class="screenshot-img">
-					<h2 class="screenshot-title rank rank-1st" data-en="National Institute of Technology, Ube College">宇部工業高等専門学校</h2>
-				</a>
-			</div>
-			<div class="row evaluation">
-				<article class="col-md-8 evaluation-text">
-					<h3 class="evaluation-title">某W大学の影響を強く受けたレスポンシブ対応サイト</h3>
-					<p>某有名私立大学であるW大の影響を強く受けたと思われ、半透明やぼかしを基調としたデザインとレイアウトになっている。しかしながら決して「パクリ」というわけではなく、しっかりとしたコンテンツを持っており、それらをきちんとうまくまとめているのは評価が高い。</p>
-					<p>教員が更新していると思われるニュースについては非常にシンプルにすることによりレイアウト崩れなどが起きにくくなっており、制作会社の気配りが伺える。またトップページにはニュースの他に、中学生向けの特設サイトへのリンクがあり、受験生や興味を持った中学生が来た際の誘導がしっかりできている点も素晴らしく、その各ページも非常に綺麗なレイアウトで、的確な情報掲示が出来ておりまさに非の打ち所がない。</p>
-					<p>ただひとつ、問題点を挙げるとするならば、2階層目以降のナビゲーションの位置が上・右・左とほぼ全方位にあるため、目移りしてしまうことだろう。</p>
-					<h4><i class="fa fa-lg fa-check-circle-o"></i> チェックポイント</h4>
-					<dl>
-						<dt>レスポンシブ対応</dt>
-						<dd>メディアクエリによってレスポンシブに対応させています。</dd>
-					</dl>
-					<dl>
-						<dt>校章とは別にロゴマークが存在</dt>
-						<dd></dd>
-					</dl>
-					<div class="visit">
-						<a href="#" class="btn btn-primary">宇部高専のサイトへ <i class="fa fa-external-link"></i></a>
-						<div class="small text-muted">※この高専がすごいサイトを離れます</div>
-					</div>
-				</article>
-				<div class="col-md-4 evaluation-point" data-kosen="ube">
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<div class="embed-responsive embed-responsive-4by3">
-								<canvas class="embed-responsive-item radarchart"></canvas>
-							</div>
-						</div>
-						<table class="table evaluation-point-table">
-						</table>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+<section class="section section-result">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 heading">
+        <h2 class="title" data-section="ウェブサイト編"><img src="/assets/img/logo.png" alt="この高専がすごい！"></h2>
+        <h3>受賞校一覧</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="award">
+          <div class="award-img">
+            <img src="/assets/img/award/1st.png" alt="大賞" class="responsive-img">
+          </div>
+          <div class="award-title">
+            <a href="#ube">宇部工業高等専門学校</a>
+          </div>
+        </div>
+        <div class="award">
+          <div class="award-img">
+            <img src="/assets/img/award/2nd.png" alt="優秀賞" class="responsive-img">
+          </div>
+          <div class="award-title">
+            <a href="#nagaoka">長岡工業高等専門学校</a>
+          </div>
+        </div>
+        <div class="award">
+          <div class="award-img">
+            <img src="/assets/img/award/3rd.png" alt="特別賞" class="responsive-img">
+          </div>
+          <div class="award-title row">
+            <div class="col-md-4">
+              <a href="#kanazawa">金沢工業高等専門学校</a>
+            </div>
+            <div class="col-md-4">
+              <a href="#kisarazu">木更津工業高等専門学校</a>
+            </div>
+            <div class="col-md-4">
+              <a href="#kochi">高知工業高等専門学校</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-bg" id="ube">
+  <div class="container">
+  	<div class="row">
+  		<div class="col-xs-12 screenshot">
+  			<div class="screenshot">
+  				<a href="#" class="screenshot-link">
+  					<img src="/assets/img/screenshot/ube.png" alt="宇部高専" class="screenshot-img">
+  					<h2 class="screenshot-title rank rank-1st" data-en="National Institute of Technology, Ube College">宇部工業高等専門学校</h2>
+  				</a>
+  			</div>
+  			<div class="row evaluation">
+  				<article class="col-md-8 evaluation-text">
+  					<h3 class="evaluation-title">某W大学の影響を強く受けたレスポンシブ対応サイト</h3>
+  					<p>某有名私立大学であるW大の影響を強く受けたと思われ、半透明やぼかしを基調としたデザインとレイアウトになっている。しかしながら決して「パクリ」というわけではなく、しっかりとしたテーマカラーによる配色が行き届いており、非常によくまとまっている。</p>
+  					<p>CMSにはWordPressを使用。教員が更新していると思われるニュースについてはページレイアウトを非常にシンプルにすることにより、ありがちなレイアウトの崩れなどが起きにくくなっている模様。制作会社の気配りが伺える。またトップページの目立つ場所に、中学生向けの特設サイトへのリンクがあり、受験生や興味を持った中学生が来た際の誘導がしっかりできている点も素晴らしく、中学生向けページも非常に綺麗なレイアウトで、的確な情報掲示が出来ておりまさに非の打ち所がない。</p>
+  					<p>ただひとつ、問題点を挙げるとするならば、2階層目以降のナビゲーションの位置が上・右・左とほぼ全方位にあるため、目移りしてしまうことだろう。</p>
+  					<h3><i class="fa fa-lg fa-check-square-o"></i> チェックポイント</h3>
+            <div class="checkpoints">
+              <dl>
+                <dt>レスポンシブ対応</dt>
+                <dd>メディアクエリによってレスポンシブに対応させています。</dd>
+              </dl>
+              <dl>
+                <dt>画面いっぱいのコンテンツ</dt>
+                <dd>コンテンツは画面サイズに合わせて伸縮し、常に画面横幅いっぱいまで表示されます。</dd>
+              </dl>
+            </div>
+  					<div class="visit">
+  						<a href="#" class="btn btn-lg btn-primary">宇部高専のサイトへ <i class="fa fa-external-link"></i></a>
+  						<div class="small text-muted">※この高専がすごいサイトを離れます</div>
+  					</div>
+  				</article>
+  				<div class="col-md-4 evaluation-point" data-kosen="ube">
+  					<div class="panel panel-default">
+  						<div class="panel-body">
+  							<div class="embed-responsive embed-responsive-4by3">
+  								<canvas class="embed-responsive-item radarchart"></canvas>
+  							</div>
+  						</div>
+  						<table class="table evaluation-point-table">
+  						</table>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+</section>
+
+<section class="section" id="nagaoka">
+  <div class="container">
+  	<div class="row">
+  		<div class="col-xs-12 screenshot">
+  			<div class="screenshot">
+  				<a href="#" class="screenshot-link">
+  					<img src="/assets/img/screenshot/nagaoka.png" alt="長岡高専" class="screenshot-img">
+  					<h2 class="screenshot-title rank rank-2nd" data-en="National Institute of Technology, Nagaoka College">長岡工業高等専門学校</h2>
+  				</a>
+  			</div>
+  			<div class="row evaluation">
+  				<article class="col-md-8 evaluation-text">
+  					<h3 class="evaluation-title">ロゴの配色を踏襲した一体感のあるウェブサイト</h3>
+  					<p>スカーレットとネイビーを基調としたデザインは、<a href="http://www.nagaoka-ct.ac.jp/gaiyou/238.html">長岡高専創立50週年記念事業のひとつとして決定されたロゴ</a>の配色を意識したものである。</p>
+  					<p>トップページのニュースを表示しているカルーセルパネルは大きな写真とともに伝えているので目につきやすく、新着情報を表示するパネルについては、新着一覧以外にも、カテゴリ別にみることもでき非常にわかりやすくまとまっている。また、中学生向けサイト、更には女子中学生向けウェブサイトも開設されており、中学生への情報提供もしっかりと行われている。全体を通してデザインのみならず情報もしっかりと整理され、作りこまれたウェブサイトである。</p>
+  					<p>しかし残念なことに現段階ではスマートフォンの対応はしていないようで、得点では宇部高専には及ばず。PCサイトのみで比較すればほぼ同率と言っても良かっただろう。</p>
+  					<h3><i class="fa fa-lg fa-check-square-o"></i> チェックポイント</h3>
+            <div class="checkpoints">
+              <dl>
+                <dt>中学生向け特設サイト</dt>
+                <dd>学校自体のウェブサイトとは違ったレイアウトで作りこまれています。</dd>
+              </dl>
+              <dl>
+                <dt>新着情報のカテゴリ分け</dt>
+                <dd>カテゴリ分けされた記事はタブUIで確認することができ、確認もしやすい。</dd>
+              </dl>
+            </div>
+  					<div class="visit">
+  						<a href="#" class="btn btn-lg btn-primary">長岡高専のサイトへ <i class="fa fa-external-link"></i></a>
+  						<div class="small text-muted">※この高専がすごいサイトを離れます</div>
+  					</div>
+  				</article>
+  				<div class="col-md-4 evaluation-point" data-kosen="nagaoka">
+  					<div class="panel panel-default">
+  						<div class="panel-body">
+  							<div class="embed-responsive embed-responsive-4by3">
+  								<canvas class="embed-responsive-item radarchart"></canvas>
+  							</div>
+  						</div>
+  						<table class="table evaluation-point-table">
+  						</table>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+</section>
+
+<section class="section section-bg" id="kanazawa">
+  <div class="container">
+  	<div class="row">
+  		<div class="col-xs-12 screenshot">
+  			<div class="screenshot">
+  				<a href="#" class="screenshot-link">
+  					<img src="/assets/img/screenshot/kanazawa.png" alt="金沢高専" class="screenshot-img">
+  					<h2 class="screenshot-title rank rank-3rd" data-en="Kanazawa Technical College">金沢工業高等専門学校</h2>
+  				</a>
+  			</div>
+  			<div class="row evaluation">
+  				<article class="col-md-8 evaluation-text">
+  					<h3 class="evaluation-title">カルーセルパネルでアグレッシブなトップページ</h3>
+  					<p>12月にトップページを変更し、カルーセルパネルを多用することによって1ページの長さを抑えつつも情報量を多くとった形となっている。レイアウトはWindows 8を彷彿とさせるグリッドレイアウトで、カラフルな印象ながらもうるささは感じない。</p>
+            <p>金沢高専は校長に外国人を起用するほど海外研修・英語学習に力を入れているようで、それはウェブサイト上でも溢れている。例えば新着ニュースで、英語訳が入力してあれば、一覧には英語を優先的に表示する仕様のようし、多くの高専では英語版ページは2世代〜3世代前のレイアウトを使う中、金沢高専は12月の更新で1世代前にはなったものの、新しいレイアウトで対応している。</p>
+            <p>新トップページはスマートフォンに対応しているようだが、一部で対応できていない部分があり、画面からはみ出したり、リサイズによりレイアウトが崩れる場合もある。</p>
+  					<h3><i class="fa fa-lg fa-check-square-o"></i> チェックポイント</h3>
+            <div class="checkpoints">
+              <dl>
+                <dt>カラフルながらもうるさくない配色</dt>
+                <dd>白色の余白を適切に取ることによりカラフルながらもうるさくないデザイン。</dd>
+              </dl>
+              <dl>
+                <dt>カルーセルパネルの多用</dt>
+                <dd>ページの長さは抑えながらも、情報量を多くすることができる。</dd>
+              </dl>
+            </div>
+  					<div class="visit">
+  						<a href="#" class="btn btn-lg btn-primary">金沢高専のサイトへ <i class="fa fa-external-link"></i></a>
+  						<div class="small text-muted">※この高専がすごいサイトを離れます</div>
+  					</div>
+  				</article>
+  				<div class="col-md-4 evaluation-point" data-kosen="kanazawa">
+  					<div class="panel panel-default">
+  						<div class="panel-body">
+  							<div class="embed-responsive embed-responsive-4by3">
+  								<canvas class="embed-responsive-item radarchart"></canvas>
+  							</div>
+  						</div>
+  						<table class="table evaluation-point-table">
+  						</table>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+</section>
+
+<section class="section" id="kisarazu">
+  <div class="container">
+  	<div class="row">
+  		<div class="col-xs-12 screenshot">
+  			<div class="screenshot">
+  				<a href="#" class="screenshot-link">
+  					<img src="/assets/img/screenshot/kisarazu.png" alt="木更津高専" class="screenshot-img">
+  					<h2 class="screenshot-title rank rank-3rd" data-en="National Institute of Technology, Kisarazu College">木更津工業高等専門学校</h2>
+  				</a>
+  			</div>
+  			<div class="row evaluation">
+  				<article class="col-md-8 evaluation-text">
+  					<h3 class="evaluation-title">シンプルながらもしっかりまとまったいまどきウェブサイト</h3>
+  					<p>一目見ると青を基調とした普通のウェブサイトだが、非常によくまとまったウェブサイトである。随所にアクセシビリティを高める工夫がされており、目的とする情報に簡単にたどり着くことができる。ページの遷移をすることなくニュースをカテゴリごとに閲覧できるニュース一覧は秀逸である。</p>
+            <p>ウェブサイト全体でデザインや構成が明確になっており、第2階層は各カテゴリの内容紹介を、そして第3階層で情報を提供。第4階層以降がほとんど存在していないのも特徴のひとつである。さらに、多くの学校では蔑ろにされている英語版ウェブサイトもしっかりと作られているのも評価が高い。</p>
+            <p>スマートフォン・タブレットでの閲覧も可能ではあるが、作りこまれているわけではなく、ナビバーが最適化のみが行われているのが残念である。</p>
+  					<h3><i class="fa fa-lg fa-check-square-o"></i> チェックポイント</h3>
+            <div class="checkpoints">
+              <dl>
+                <dt>わかりやすいメニューアイコン</dt>
+                <dd>ナビバーのアイコンがシンプルながらもわかりやすく、ひと目で情報にアクセスしやすくなっています。</dd>
+              </dl>
+              <dl>
+                <dt>充実の英語版ウェブサイト</dt>
+                <dd>日本語版ウェブサイトの情報の大半を網羅した英語版サイトが存在しています。</dd>
+              </dl>
+            </div>
+  					<div class="visit">
+  						<a href="#" class="btn btn-lg btn-primary">木更津高専のサイトへ <i class="fa fa-external-link"></i></a>
+  						<div class="small text-muted">※この高専がすごいサイトを離れます</div>
+  					</div>
+  				</article>
+  				<div class="col-md-4 evaluation-point" data-kosen="kisarazu">
+  					<div class="panel panel-default">
+  						<div class="panel-body">
+  							<div class="embed-responsive embed-responsive-4by3">
+  								<canvas class="embed-responsive-item radarchart"></canvas>
+  							</div>
+  						</div>
+  						<table class="table evaluation-point-table">
+  						</table>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+</section>
+
+<section class="section section-bg" id="kochi">
+  <div class="container">
+  	<div class="row">
+  		<div class="col-xs-12 screenshot">
+  			<div class="screenshot">
+  				<a href="#" class="screenshot-link">
+  					<img src="/assets/img/screenshot/kochi.png" alt="高知高専" class="screenshot-img">
+  					<h2 class="screenshot-title rank rank-3rd" data-en="National Institute of Technology, Kochi College">高知工業高等専門学校</h2>
+  				</a>
+  			</div>
+  			<div class="row evaluation">
+  				<article class="col-md-8 evaluation-text">
+  					<h3 class="evaluation-title">新学科設立に向けてしっかりとしたプロモーション</h3>
+  					<p>平成28年度から現在4つある学科を一本化した「ソーシャルデザイン工学科」が設立されるのに向けて、「Miraibito」というキャッチコピーを掲げて、サイト全体でしっかりとしたプロモーションが行われている。手のひらの形をしたロゴが印象的である。</p>
+            <p>トップページにあるコンテンツは、ほぼ全て中学生向けのページへのリンクとなっており、メインページが中学生向けのウェブサイトになっているものの、メニューに行けばしっかりと動線は確保されている。</p>
+            <p>ただしスマートフォンには対応していない他、細かいレイアウトが崩れている部分があるのが非常に惜しいポイントである。</p>
+  					<h3><i class="fa fa-lg fa-check-square-o"></i> チェックポイント</h3>
+            <div class="checkpoints">
+              <dl>
+                <dt>改組に向けたプロモーション</dt>
+                <dd>手のひらの形をした共通のロゴ、「Miraibito」というキャッチコピーのもと改組に向けたプロモーション活動が行われています。</dd>
+              </dl>
+              <dl>
+                <dt>HTTPS対応</dt>
+                <dd>全ページで暗号化通信のHTTPSに対応。認証局は高専の認証局。</dd>
+              </dl>
+            </div>
+  					<div class="visit">
+  						<a href="#" class="btn btn-lg btn-primary">高知高専のサイトへ <i class="fa fa-external-link"></i></a>
+  						<div class="small text-muted">※この高専がすごいサイトを離れます</div>
+  					</div>
+  				</article>
+  				<div class="col-md-4 evaluation-point" data-kosen="kochi">
+  					<div class="panel panel-default">
+  						<div class="panel-body">
+  							<div class="embed-responsive embed-responsive-4by3">
+  								<canvas class="embed-responsive-item radarchart"></canvas>
+  							</div>
+  						</div>
+  						<table class="table evaluation-point-table">
+  						</table>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </div>
 </section>
 
 <script id="announceTemplate" type="text/x-jsrender">
   <tbody>
-    <tr><th>デザイン性</th>        <td class="point-design">{{:~getStar(data[0])}}</td></tr>
-    <tr><th>更新頻度</th>          <td class="point-relaod">{{:~getStar(data[1])}}</td></tr>
-    <tr><th>情報整理</th>          <td class="point-info">{{:~getStar(data[2])}}</td></tr>
-    <tr><th>アクセシビリティ</th>  <td class="point-access">{{:~getStar(data[3])}}</td></tr>
-    <tr><th>中学生向け</th>        <td class="point-4jhs">{{:~getStar(data[4])}}</td></tr>
-    <tr><th>合計</th>              <td class="point-total">{{:~sumArray(data)}}</td></tr>
+    <tr><th>デザイン性</th>           <td>{{:~getStar(data[0])}}</td></tr>
+    <tr><th>更新頻度</th>             <td>{{:~getStar(data[1])}}</td></tr>
+    <tr><th>情報整理</th>             <td>{{:~getStar(data[2])}}</td></tr>
+    <tr><th>アクセシビリティ</th>     <td>{{:~getStar(data[3])}}</td></tr>
+    <tr><th>中学生向け</th>           <td>{{:~getStar(data[4])}}</td></tr>
+    <tr class="active"><th>合計</th>  <td class="point-total">{{:~sumArray(data)}}</td></tr>
   </tbody>
 </script>
 <script src="lib/jquery/jquery.min.js"></script>
