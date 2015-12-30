@@ -16,9 +16,37 @@
 	}
 
 	$(document).ready(function() {
+
+		$(window).scroll(function() {
+			var visible = $('.return-pagetop-button').is(':visible');
+			if ($(this).scrollTop() >= 300 && !visible) {
+				$('.return-pagetop-button').fadeIn();
+			}
+			else if ($(this).scrollTop() < 300 && visible) {
+				$('.return-pagetop-button').fadeOut();
+			}
+		});
+
+		$('a[href^="#"]').click(function() {
+			// Bootstrap関連っぽそうだったら
+			if (! $.isEmptyObject($(this).data())) {
+				return; // 何もしない
+			}
+			// 値取得
+			var href = $(this).attr('href');
+			// hrefが空だったら
+			if (href === '' || href === '#') {
+				return; // 終わり
+			}
+			var $target = $(href);
+			var position = $target.offset().top;
+			$('body,html').animate({scrollTop:position}, 500, 'swing');
+			return false;
+		});
 		Chart.defaults.global.responsive = true;
+		Chart.defaults.global.animation = false;
 		var kosenData = {
-			ube: [5, 4.5, 5, 5, 5],
+			ube: [5, 4.5, 5, 4.5, 5],
 			nagaoka: [4.5, 4.5, 5, 3, 5],
 			kanazawa: [4.5, 4, 4.5, 4, 3.5],
 			kisarazu: [4, 3.5, 5, 4.5, 3.5],
