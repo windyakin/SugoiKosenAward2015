@@ -87,6 +87,51 @@ header {
 			}
 		}
 	}
+	.twitter-share-list {
+		position: relative;
+		display: inline-block;
+		height: 20px;
+		padding: 0 5px;
+		margin: 0 0 0 5px;
+		font-family: Arial;
+		font-size: 11px;
+		line-height: 18px;
+		vertical-align: top;
+		background: #fff;
+		border: 1px solid #9197a3;
+		border-radius: 3px;
+		&::before,
+		&::after {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			display: block;
+			width: 0;
+			height: 0;
+			margin: auto;
+			content: "";
+			border-color: transparent;
+			border-style: solid;
+		}
+		&::before {
+			left: -5px;
+			border-width: 5px 5px 5px 0;
+			border-right-color: #9197a3;
+		}
+		&::after {
+			left: -3px;
+			border-width: 3px 3px 3px 0;
+			border-right-color: #fff;
+		}
+		&:link,
+		&:visited,
+		&:hover,
+		&:active,
+		&:focus {
+			color: #555;
+			text-decoration: none;
+		}
+	}
 }
 
 .section {
@@ -117,6 +162,9 @@ header {
 			}
 		}
 	}
+}
+
+.plot {
 	.icon {
 		width: 50px;
 	}
@@ -132,9 +180,23 @@ header {
 	}
 }
 
-.heading-result {
-	font-size: $font-size-h1;
-	letter-spacing: 0.4em;
+.result {
+	color: #fff;
+	text-shadow: 0 5px 5px rgba(#000, 0.5);
+	background-image: url("/assets/img/curtain.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	.title {
+		width: 580px;
+		&::after {
+			border-color: #fff;
+		}
+	}
+	.heading-result {
+		font-size: 3em;
+		letter-spacing: 0.4em;
+	}
 }
 
 .award {
@@ -144,7 +206,7 @@ header {
 		margin-bottom: $line-height-computed;
 		text-align: center;
 		img {
-			max-width: 200px;
+			max-width: 150px;
 			margin: 0 auto;
 		}
 	}
@@ -154,6 +216,21 @@ header {
 			display: inline-block;
 			margin-bottom: $line-height-computed;
 			font-size: $font-size-h2;
+			font-weight: bold;
+			&:link, &:visited {
+				color: #fff;
+			}
+			&:hover, &:active, &:focus {
+				color: #eee;
+			}
+		}
+	}
+	&.award-1st {
+		.award-img img {
+			max-width: 200px;
+		}
+		.award-title a {
+			font-size: $font-size-h1;
 		}
 	}
 }
@@ -246,6 +323,7 @@ header {
 	}
 	.visit {
 		margin-top: $line-height-computed;
+		margin-bottom: $line-height-computed;
 	}
 	.evaluation-title {
 		padding: 0 0 $padding-large-vertical;
