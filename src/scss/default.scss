@@ -2,6 +2,7 @@
 
 @import "honoka/variables";
 @import "eli/variables";
+@import "eli/mixins";
 
 header {
 	padding: $padding-base-vertical 0;
@@ -16,14 +17,6 @@ header {
 		display: block;
 		max-width: 100%;
 		margin: 0 auto;
-	}
-	&::after {
-		display: block;
-		padding: $padding-base-vertical 0;
-		font-size: $font-size-large;
-		text-align: center;
-		content: attr(data-section);
-		border-top: 2px solid #000;
 	}
 }
 
@@ -156,11 +149,6 @@ header {
 			width: 100%;
 			max-width: 150px;
 		}
-		.accounts {
-			.fa.fa-lg {
-				vertical-align: 0;
-			}
-		}
 	}
 }
 
@@ -194,8 +182,12 @@ header {
 		}
 	}
 	.heading-result {
-		font-size: 3em;
-		letter-spacing: 0.4em;
+		font-size: 2.5em;
+		@include md {
+			font-size: 3em;
+			text-indent: 0.3em;
+			letter-spacing: 0.3em;
+		}
 	}
 }
 
@@ -240,22 +232,28 @@ header {
 	overflow: hidden;
 	.screenshot-link {
 		display: block;
-		&::after {
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			width: 200px;
-			height: $line-height-computed * 3;
-			padding: $line-height-computed $padding-base-horizontal;
-			margin: auto;
-			line-height: $line-height-computed;
-			color: #fff;
-			text-align: center;
-			content: "ウェブサイトを見る";
-			background: rgba(#000, 0.8);
-			border-radius: $border-radius-base;
+		color: $text-color;
+		&:hover, &:active, &:focus {
+			text-decoration: none;
+		}
+		@include md {
+			&::after {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				width: 200px;
+				height: $line-height-computed * 3;
+				padding: $line-height-computed $padding-base-horizontal;
+				margin: auto;
+				line-height: $line-height-computed;
+				color: #fff;
+				text-align: center;
+				content: "ウェブサイトを見る";
+				background: rgba(#000, 0.8);
+				border-radius: $border-radius-base;
+			}
 		}
 	}
 	.screenshot-img {
@@ -263,40 +261,41 @@ header {
 		max-width: 100%;
 	}
 	.screenshot-title {
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		padding: ($line-height-computed * 2) ($padding-large-horizontal * 2) ($line-height-computed * 2) ($padding-large-horizontal * 2 + 150px);
+		padding: $line-height-computed 0;
 		margin: 0;
-		font-size: $font-size-h1;
-		color: #fff;
-		text-shadow: 0 2px $gray-dark;
-		letter-spacing: 0.2em;
-		background: rgba(#000, 0.6);
-		transition-timing-function: ease;
-		transition-duration: 0.3s;
-		transition-property: opacity;
-		&::after {
-			display: block;
-			padding-top: $line-height-computed / 3;
-			margin-top: $line-height-computed / 3;
-			font-size: $font-size-base;
-			font-weight: normal;
-			letter-spacing: normal;
-			content: attr(data-en);
-			border-top: 1px dotted #fff;
+		text-align: center;
+		@include md {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			padding: ($line-height-computed * 2) ($padding-large-horizontal * 2) ($line-height-computed * 2) ($padding-large-horizontal * 2 + 150px);
+			font-size: $font-size-h1;
+			color: #fff;
+			text-align: left;
+			text-shadow: 0 2px $gray-dark;
+			letter-spacing: 0.2em;
+			background: rgba(#000, 0.6);
+			transition-timing-function: ease;
+			transition-duration: 0.3s;
+			transition-property: opacity;
+			&::after {
+				display: block;
+				padding-top: $line-height-computed / 3;
+				margin-top: $line-height-computed / 3;
+				font-size: $font-size-base;
+				font-weight: normal;
+				letter-spacing: normal;
+				content: attr(data-en);
+				border-top: 1px dotted #fff;
+			}
 		}
 	}
 }
 
 .rank {
 	&::before {
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: $padding-large-horizontal;
 		display: block;
 		width: 150px;
 		height: 150px;
@@ -304,6 +303,11 @@ header {
 		content: "";
 		background-repeat: no-repeat;
 		background-size: contain;
+		@include md {
+			position: absolute;
+			bottom: $padding-base-vertical;
+			left: $padding-base-horizontal * 2;
+		}
 	}
 	&.rank-1st::before {
 		background-image: url("/assets/img/award/1st.png");
@@ -316,8 +320,15 @@ header {
 	}
 }
 
+.license {
+	padding-top: $padding-base-vertical;
+	font-size: $font-size-small;
+	color: $gray;
+	text-align: right;
+}
+
 .evaluation {
-	margin-top: $line-height-computed * 2;
+	margin-top: $line-height-computed;
 	.evaluation-text {
 		text-align: justify;
 	}
@@ -361,8 +372,15 @@ header {
 footer {
 	padding: ($line-height-computed * 2) 0;
 	background: $gray-lighter;
+	.copyright {
+		margin-top: $line-height-computed / 2;
+		margin-bottom: $line-height-computed / 2;
+		text-align: center;
+	}
 	.creative-commons {
-		text-align: right;
+		margin-top: $line-height-computed / 2;
+		font-size: $font-size-small;
+		text-align: center;
 	}
 }
 
