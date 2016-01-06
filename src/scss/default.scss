@@ -72,7 +72,10 @@ header {
 			left: -50%;
 			float: left;
 			padding: 0;
-			margin: 0 10px;
+			margin: 0 5px;
+			@include md {
+				margin: 0 10px;
+			}
 			.fb-like {
 				> span {
 					vertical-align: 0 !important;
@@ -144,10 +147,15 @@ header {
 		margin-bottom: $line-height-computed;
 		h3 {
 			margin-top: $line-height-computed / 2;
+			text-align: center;
+			@include md {
+				text-align: left;
+			}
 		}
 		.avatar {
 			width: 100%;
 			max-width: 150px;
+			margin: 0 auto;
 		}
 	}
 }
