@@ -17,6 +17,20 @@
 
 	$(document).ready(function() {
 
+		$.ajax({
+			url: 'http://jsoon.digitiminimi.com/twitter/count.json',
+			type: 'get',
+			data: {
+				url: 'http://sugoi.windyakin.net',
+				callback: 'count'
+			},
+			jsonpCallback: 'count',
+			dataType: 'jsonp',
+		}).done(function(data) {
+			var count = data.count;
+			$('.twitter-share-list').text(count);
+		});
+
 		$(window).scroll(function() {
 			var visible = $('.return-pagetop-button').is(':visible');
 			if ($(this).scrollTop() >= 300 && !visible) {
