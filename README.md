@@ -1,8 +1,8 @@
 # SUGOI KOSEN Award
 
-[![SUGOI KOSEN Award](src/img/logo.png)](http://sugoi.windyakin.net/)
+[![SUGOI KOSEN Award](src/img/ogp.png)](http://sugoi.windyakin.net/)
 
-This Repository based on [Eli](https://github.com/windyakin/Eli)
+This repository is based on [Eli](https://github.com/windyakin/Eli)
 
 ## License
 
